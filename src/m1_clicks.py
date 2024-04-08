@@ -5,7 +5,7 @@ import tkinter as tk
 # In this module, all of the _todo_ items will be in one comment because you
 # will be modifying the same block of code as you go.
 #
-# TODO: 1. (1 pt)
+# Done: 1. (1 pt)
 #
 #   First, create a tkinter window called window.
 #
@@ -15,7 +15,7 @@ import tkinter as tk
 #   Once you have done this, then change the above _TODO_ to DONE.
 #
 #
-# TODO: 2. (4 pts)
+# Done: 2. (4 pts)
 #
 #   Now, create a frame called frm_a that has a width of 100 and height of 100.
 #
@@ -36,3 +36,19 @@ import tkinter as tk
 #   Once you have done this, then change the above _TODO_ to DONE.
 #
 ###############################################################################
+window = tk.Tk()
+
+frm_a = tk.Frame(master = window, width = 100, height = 100, bg = "yellow")
+frm_a.pack()
+
+def handle_click(event):
+    print("Left")
+
+frm_a.bind("<Button-1>", handle_click)
+
+def handle_click(event):
+    print("Right")
+
+frm_a.bind("<Button-3>", handle_click)
+
+window.mainloop()
